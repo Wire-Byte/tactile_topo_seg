@@ -1,0 +1,87 @@
+############################
+# OS / Editor / IDE
+############################
+.DS_Store
+Thumbs.db
+
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# VSCode web / code-server / plugin cache
+.local/
+.cache/
+.config/
+.vscode-server/
+.ipynb_checkpoints/
+
+############################
+# Python
+############################
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.pyd
+*.so
+*.egg-info/
+dist/
+build/
+
+############################
+# Logs / outputs
+############################
+logs/
+*.log
+
+############################
+# Large artifacts / datasets
+############################
+# 默认忽略整个数据集
+data/**
+
+# 保留目录占位文件（每个需要保留结构的目录放一个 .gitkeep）
+!data/**/.gitkeep
+
+# 保留每个数据集的少量示例图：放到 data/<dataset>/samples/
+!data/**/samples/
+!data/**/samples/**
+
+# 保留划分/索引文件（如果你希望一起备份）
+!data/**/Index/
+!data/**/Index/*.txt
+
+############################
+# Training outputs (MMSeg)
+############################
+# 默认忽略所有训练产物
+work_dirs/**
+
+# 关键：先放行父目录，再放行目标文件（否则可能依旧匹配不到）
+!work_dirs/segformer_b2_tp/
+!work_dirs/segformer_b2_tp/ckpt_eval_summary.txt
+
+# 可选：保留少量可视化样例（你手动挑几张复制到这里）
+!work_dirs/segformer_b2_tp/vis_samples/
+!work_dirs/segformer_b2_tp/vis_samples/**
+
+############################
+# Big model / array files (global)
+############################
+*.pth
+*.pt
+*.ckpt
+*.pkl
+*.npy
+*.npz
+
+############################
+# Archives
+############################
+*.zip
+*.tar
+*.tar.gz
+*.7z
+
+!work_dirs/segformer_b2_tp/preds.pkl

@@ -1,0 +1,19 @@
+# Environment Snapshot (before shutdown)
+
+Date:
+Platform: Aliyun DSW
+GPU: NVIDIA A10 24GB
+
+Commands to restore:
+  source .venv/bin/activate
+
+Expected versions:
+  torch: 2.9.1+cu128
+  cuda: 12.8
+  mmengine: 0.10.7
+  mmseg: 1.2.2
+  mmcv: 2.2.0 (TO BE DOWNGRADED to 2.1.x)
+
+Notes:
+  - mmcv 2.2.0 incompatible with mmseg 1.2.2
+  - Next step: downgrade mmcv to 2.1.0
