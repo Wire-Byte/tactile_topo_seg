@@ -42,16 +42,15 @@ val_pipeline = [
     dict(type='LoadImageFromFile'),
     dict(type='LoadAnnotations'),
     dict(type='MapTPLabels', mapping={255: 1}),
-    dict(type='Resize', scale=(1024, 1024), keep_ratio=True),
-
     dict(type='GenerateTPSkeleton', target_label=1),
     dict(type='PackSegInputsWithSkeleton'),
 ]
 test_pipeline = val_pipeline
 
 
+
 train_dataloader = dict(
-    batch_size=2,
+    batch_size=1,
     num_workers=4,
     persistent_workers=True,
     sampler=dict(type='InfiniteSampler', shuffle=True),
