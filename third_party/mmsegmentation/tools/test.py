@@ -6,6 +6,22 @@ import os.path as osp
 from mmengine.config import Config, DictAction
 from mmengine.runner import Runner
 
+# ---- PyTorch 2.6 compatibility: load trusted mmengine checkpoints with weights_only=False ----
+import functools
+import torch
+
+_torch_load = torch.load
+
+@functools.wraps(_torch_load)
+def _torch_load_compat(*args, **kwargs):
+    # mmengine checkpoints contain non-weight objects (meta, history, numpy states, etc.)
+    # For checkpoints from trusted source (your own training), disable weights_only.
+    kwargs.setdefault("weights_only", False)
+    return _torch_load(*args, **kwargs)
+
+torch.load = _torch_load_compat
+
+
 
 # TODO: support fuse_conv_bn, visualization, and format_only
 def parse_args():
