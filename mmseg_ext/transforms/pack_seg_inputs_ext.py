@@ -4,47 +4,63 @@ from mmseg.registry import TRANSFORMS
 from mmseg.datasets.transforms import PackSegInputs
 from mmengine.structures import PixelData
 
+
+def _to_1chw(x, dtype=None):
+    """Convert numpy/torch HxW or 1xHxW to torch 1xHxW."""
+    if x is None:
+        return None
+    if isinstance(x, np.ndarray):
+        t = torch.from_numpy(x)
+    elif torch.is_tensor(x):
+        t = x
+    else:
+        raise TypeError(f"Unsupported type: {type(x)}")
+
+    if t.ndim == 2:
+        t = t.unsqueeze(0)
+    elif t.ndim == 3:
+        # assume already (1,H,W) or (C,H,W)
+        pass
+    else:
+        raise ValueError(f"Unexpected ndim={t.ndim}, expect 2 or 3")
+
+    if dtype is not None:
+        t = t.to(dtype)
+    return t
+
+
 @TRANSFORMS.register_module()
-class PackSegInputsWithSkeleton(PackSegInputs):
-    """PackSegInputs + additionally pack gt_skeleton and gt_skel_dist into data_samples."""
+class PackSegInputsExt(PackSegInputs):
+    """PackSegInputs + pack extra supervision maps into data_samples."""
 
     def transform(self, results: dict) -> dict:
         packed = super().transform(results)
-        data_samples = packed['data_samples']
+        data_samples = packed["data_samples"]
 
-        # ---- pack gt_skeleton (as you already did) ----
-        if 'gt_skeleton' in results:
-            skel = results['gt_skeleton']
-            if isinstance(skel, np.ndarray):
-                # HxW -> 1xHxW
-                skel = torch.from_numpy(skel).long().unsqueeze(0)
-            elif torch.is_tensor(skel):
-                if skel.ndim == 2:
-                    skel = skel.long().unsqueeze(0)
-                else:
-                    skel = skel.long()
-            else:
-                raise TypeError(f"Unsupported gt_skeleton type: {type(skel)}")
-
+        # gt_skeleton: (H,W) -> (1,H,W) long
+        if "gt_skeleton" in results and results["gt_skeleton"] is not None:
+            skel = _to_1chw(results["gt_skeleton"], dtype=torch.long)
             data_samples.gt_skeleton = PixelData(data=skel)
 
-        # ---- NEW: pack gt_skel_dist (distance-to-skeleton map) ----
-        if 'gt_skel_dist' in results and results['gt_skel_dist'] is not None:
-            dist = results['gt_skel_dist']  # expected (H,W) float32
-            if isinstance(dist, np.ndarray):
-                # HxW -> 1xHxW
-                if dist.ndim == 2:
-                    dist = torch.from_numpy(dist).float().unsqueeze(0)
-                else:
-                    dist = torch.from_numpy(dist).float()
-            elif torch.is_tensor(dist):
-                if dist.ndim == 2:
-                    dist = dist.float().unsqueeze(0)
-                else:
-                    dist = dist.float()
-            else:
-                raise TypeError(f"Unsupported gt_skel_dist type: {type(dist)}")
-
+        # gt_skel_dist: (H,W) -> (1,H,W) float
+        if "gt_skel_dist" in results and results["gt_skel_dist"] is not None:
+            dist = _to_1chw(results["gt_skel_dist"], dtype=torch.float32)
             data_samples.gt_skel_dist = PixelData(data=dist)
 
+        # gt_edge_dist: (H,W) -> (1,H,W) float
+        if "gt_edge_dist" in results and results["gt_edge_dist"] is not None:
+            edge = _to_1chw(results["gt_edge_dist"], dtype=torch.float32)
+            data_samples.gt_edge_dist = PixelData(data=edge)
+
+        # gt_mask_dist: (H,W) -> (1,H,W) float
+        if "gt_mask_dist" in results and results["gt_mask_dist"] is not None:
+            md = _to_1chw(results["gt_mask_dist"], dtype=torch.float32)
+            data_samples.gt_mask_dist = PixelData(data=md)
+
         return packed
+
+
+# 兼容旧名字（如果你别处还在用）
+@TRANSFORMS.register_module()
+class PackSegInputsWithSkeleton(PackSegInputsExt):
+    pass

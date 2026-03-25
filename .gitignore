@@ -58,13 +58,6 @@ data/**
 # 默认忽略所有训练产物
 work_dirs/**
 
-# 关键：先放行父目录，再放行目标文件（否则可能依旧匹配不到）
-!work_dirs/segformer_b2_tp/
-!work_dirs/segformer_b2_tp/ckpt_eval_summary.txt
-
-# 可选：保留少量可视化样例（你手动挑几张复制到这里）
-!work_dirs/segformer_b2_tp/vis_samples/
-!work_dirs/segformer_b2_tp/vis_samples/**
 
 ############################
 # Big model / array files (global)
@@ -83,5 +76,6 @@ work_dirs/**
 *.tar
 *.tar.gz
 *.7z
-
+#屏蔽work_dirs下的所有文件
+work_dirs/**
 !work_dirs/segformer_b2_tp/preds.pkl
