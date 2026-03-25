@@ -8,7 +8,6 @@ custom_imports = dict(
         'mmseg_ext.datasets',
         'mmseg_ext.transforms',
         'mmseg_ext.models',
-        'mmseg_ext.models.tp_skeleton_head',
     ],
     allow_failed_imports=False
 )
@@ -30,11 +29,7 @@ train_pipeline = [
     dict(type='RandomFlip', prob=0.5),
 
     dict(type='PhotoMetricDistortion'),
-
-    # ✅ 最后基于“最终 gt_sem_seg 尺寸”生成 skeleton
-    dict(type='GenerateTPSkeleton', target_label=1),
-
-    dict(type='PackSegInputsWithSkeleton'),
+    dict(type='PackSegInputs'),
 ]
 
 
@@ -43,9 +38,7 @@ val_pipeline = [
     dict(type='LoadAnnotations'),
     dict(type='MapTPLabels', mapping={255: 1}),
     dict(type='Resize', scale=(1024, 1024), keep_ratio=True),
-
-    dict(type='GenerateTPSkeleton', target_label=1),
-    dict(type='PackSegInputsWithSkeleton'),
+    dict(type='PackSegInputs'),
 ]
 test_pipeline = val_pipeline
 
@@ -83,22 +76,8 @@ val_evaluator = dict(type='IoUMetric', iou_metrics=['mIoU', 'mDice', 'mFscore'])
 test_evaluator = val_evaluator
 
 # ==== model override ====
-# main seg head: 2 classes
-# add auxiliary skeleton head: 1-channel binary
 model = dict(
     decode_head=dict(num_classes=2),
-
-    # 加一个 skeleton auxiliary head（单尺度输入）
-    auxiliary_head=dict(
-        type='TPSkeletonHead',
-        in_channels=64,          # 这里要匹配你选的那一层特征的channel
-        in_index=0,              # 你想用哪一层就填哪个index（取决于 backbone 输出）
-        input_transform=None,    # 明确：单层，不做多层融合
-        channels=64,
-        loss_bce=dict(type='CrossEntropyLoss', use_sigmoid=True, loss_weight=1.0),
-        loss_dice=dict(type='DiceLoss', use_sigmoid=True, loss_weight=1.0),
-    )
-
 )
 
 
