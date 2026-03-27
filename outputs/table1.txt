@@ -1,0 +1,22 @@
+Main Table 1 (best-val, single seed)
+
+| Model | Best step | aAcc | mIoU | mDice | mFscore | mPrecision | mRecall |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| SegFormer-B2 (baseline) | 8500 | 94.0200 | 80.4000 | 88.5800 | 88.5800 | 85.8800 | 92.0700 |
+| SegFormer-B2 + Skeleton | 8500 | 94.7400 | 81.9200 | 89.5700 | 89.5700 | 87.8800 | 91.5300 |
+| SegFormer-B2 + Skeleton + clDice-v2 (4090 bs4) | 8000 | 95.7800 | 84.5100 | 91.2400 | 91.2400 | 91.1900 | 91.2900 |
+| DeepLabV3+ (R50) | 9000 | 94.9700 | 81.1200 | 88.9800 | 88.9800 | 91.2700 | 87.0300 |
+| PSPNet (R50) | 9000 | 95.1100 | 81.3200 | 89.1100 | 89.1100 | 92.2100 | 86.5900 |
+| UPerNet (R50) | 6000 | 93.9000 | 77.9800 | 86.8000 | 86.8000 | 88.3600 | 85.4100 |
+
+Sources used for each row:
+- SegFormer-B2 baseline / Skeleton / Skeleton+clDice-v2: work_dirs/compare_official_seg_metrics_baseline_vs_skel_vs_cldice_v2_best8000.csv
+- DeepLabV3+ (R50): work_dirs/deeplabv3plus_r50_tp_main_table1_B/20260326_214948/vis_data/scalars.json (step=9000)
+- PSPNet (R50): work_dirs/pspnet_r50_tp_main_table1_B/20260326_224011/vis_data/scalars.json (step=9000)
+- UPerNet (R50): work_dirs/upernet_r50_tp_main_table1_B/20260326_233059/vis_data/scalars.json (step=6000)
+
+Cross-check logs:
+- logs/train_deeplabv3plus_r50_tp_main_table1_B_10k_20260326_214946.log -> best mIoU 81.1200 at iter 9000
+- logs/train_pspnet_r50_tp_main_table1_B_10k_20260326_224009.log -> best mIoU 81.3200 at iter 9000
+- logs/train_upernet_r50_tp_main_table1_B_10k_20260326_233057.log -> best mIoU 77.9800 at iter 6000
+- logs/train_skel_cldice_v2_4090_bs4_10k_20260326_150548.log contains multiple phases; table uses the official compared best8000 entry (mIoU 84.5100) from the CSV above.
