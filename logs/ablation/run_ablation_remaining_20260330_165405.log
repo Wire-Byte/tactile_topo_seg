@@ -1,0 +1,11 @@
+nohup: ignoring input
+[RUN] python -u /root/autodl-tmp/tactile_topo_seg/third_party/mmsegmentation/tools/train.py /root/autodl-tmp/tactile_topo_seg/configs/tp_dataset/ablation_generated/w_0p05.py --work-dir /root/autodl-tmp/tactile_topo_seg/work_dirs/ablation/w_0p05
+[DONE] w_0p05 train_status=ok best=83.9400 iter=10000
+[RUN] python -u /root/autodl-tmp/tactile_topo_seg/third_party/mmsegmentation/tools/train.py /root/autodl-tmp/tactile_topo_seg/configs/tp_dataset/ablation_generated/w_0p10.py --work-dir /root/autodl-tmp/tactile_topo_seg/work_dirs/ablation/w_0p10
+[DONE] w_0p10 train_status=failed best= iter=
+[RUN] python -u /root/autodl-tmp/tactile_topo_seg/third_party/mmsegmentation/tools/train.py /root/autodl-tmp/tactile_topo_seg/configs/tp_dataset/ablation_generated/w_0p20.py --work-dir /root/autodl-tmp/tactile_topo_seg/work_dirs/ablation/w_0p20
+[DONE] w_0p20 train_status=failed best= iter=
+[RUN] python -u /root/autodl-tmp/tactile_topo_seg/third_party/mmsegmentation/tools/train.py /root/autodl-tmp/tactile_topo_seg/configs/tp_dataset/ablation_generated/w_0p30.py --work-dir /root/autodl-tmp/tactile_topo_seg/work_dirs/ablation/w_0p30
+[DONE] w_0p30 train_status=failed best= iter=
+[OK] comparison table written: /root/autodl-tmp/tactile_topo_seg/work_dirs/ablation/ablation_results_completed.csv
+

@@ -1,0 +1,7 @@
+nohup: ignoring input
+[START] 2026-03-30 21:00:14 waiting for GPU
+[WAIT] 2026-03-30 21:00:17 cuda_available=
+[WAIT] 2026-03-30 21:01:19 cuda_available=
+[WAIT] 2026-03-30 21:02:21 cuda_available=
+[WAIT] 2026-03-30 21:03:23 cuda_available=
+[WAIT] 2026-03-30 21:04:25 cuda_available=
