@@ -1,0 +1,5 @@
+case,decode_cldice_weight,aux_cldice_weight,decode_cldice_on,aux_cldice_on,mIoU,mDice,mFscore,mPrecision,mRecall,best_iter,max_iter_ckpt,is_complete,status,delta_mIoU_vs_core_none
+core_none,0.0,0.0,no,no,86.47,92.47,92.47,92.78,92.16,10000,10000,yes,ok_from_scalars,0.00
+core_main_only,0.1,0.0,yes,no,81.77,89.44,89.44,90.17,88.75,500,10000,yes,equiv_complete_from_load6000_plus4500,-4.70
+core_aux_only,0.0,0.1,no,yes,83.74,90.75,90.75,89.75,91.84,9500,10000,yes,ok_from_scalars,-2.73
+core_both,0.1,0.1,yes,yes,86.60,92.55,92.55,91.93,93.20,9500,10000,yes,ok_from_scalars,0.13

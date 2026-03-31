@@ -127,3 +127,9 @@
 [WAIT] 2026-03-31 03:14:58 another ablation train is active; hold core_main_only
 [WAIT] 2026-03-31 03:16:28 another ablation train is active; hold core_main_only
 [WAIT] 2026-03-31 03:17:58 another ablation train is active; hold core_main_only
+[RUN] 2026-03-31 09:09:36 case=core_main_only rc=-15 max_iter=6000
+
+===== CMD 2026-03-31 09:09:36 =====
+python -u /root/autodl-tmp/tactile_topo_seg/tools/rebuild_ablation_summary.py
+[OK] wrote /root/autodl-tmp/tactile_topo_seg/work_dirs/ablation/ablation_results_master.csv
+[OK] wrote /root/autodl-tmp/tactile_topo_seg/work_dirs/ablation/ablation_logs_index.csv

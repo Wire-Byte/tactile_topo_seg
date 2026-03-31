@@ -1,0 +1,5 @@
+case,decode_cldice_weight,aux_cldice_weight,mIoU,mDice,mFscore,mPrecision,mRecall,best_iter,max_iter_ckpt,is_complete,status,delta_mIoU_vs_w0p10
+w_0p05,0.05,0.05,83.94,90.88,90.88,89.90,91.95,10000,10000,yes,ok_from_scalars,-0.79
+w_0p10,0.10,0.10,84.73,91.38,91.38,91.15,91.61,6000,10000,yes,ok_from_scalars,0.00
+w_0p20,0.20,0.20,85.73,92.01,92.01,91.44,92.60,8500,10000,yes,ok_from_scalars,1.00
+w_0p30,0.30,0.30,82.67,90.04,90.04,90.27,89.81,7000,10000,yes,ok_from_scalars,-2.06
