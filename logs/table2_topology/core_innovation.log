@@ -1,0 +1,18 @@
+[START] core_innovation
+usage: export_preds_unique_by_index.py [-h] --config CONFIG --checkpoint
+                                       CHECKPOINT [--split-file SPLIT_FILE]
+                                       [--data-root DATA_ROOT]
+                                       [--img-subdir IMG_SUBDIR]
+                                       [--gt-subdir GT_SUBDIR] --out-dir
+                                       OUT_DIR [--mapping-csv MAPPING_CSV]
+                                       [--device DEVICE]
+export_preds_unique_by_index.py: error: the following arguments are required: --out-dir
+[START] core_innovation
+usage: export_preds_unique_by_index.py [-h] --config CONFIG --checkpoint
+                                       CHECKPOINT [--split-file SPLIT_FILE]
+                                       [--data-root DATA_ROOT]
+                                       [--img-subdir IMG_SUBDIR]
+                                       [--gt-subdir GT_SUBDIR] --out-dir
+                                       OUT_DIR [--mapping-csv MAPPING_CSV]
+                                       [--device DEVICE]
+export_preds_unique_by_index.py: error: the following arguments are required: --out-dir

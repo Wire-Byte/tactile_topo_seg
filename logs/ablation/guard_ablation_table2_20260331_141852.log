@@ -1,0 +1,7 @@
+[START] 2026-03-31 14:18:52 guard started
+[CASES] 
+
+===== CMD 2026-03-31 14:18:52 =====
+python -u /root/autodl-tmp/tactile_topo_seg/tools/rebuild_ablation_summary.py
+[OK] wrote /root/autodl-tmp/tactile_topo_seg/work_dirs/ablation/ablation_results_master.csv
+[OK] wrote /root/autodl-tmp/tactile_topo_seg/work_dirs/ablation/ablation_logs_index.csv

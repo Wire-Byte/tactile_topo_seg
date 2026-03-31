@@ -1,0 +1,21 @@
+
+===== CMD =====
+/root/miniconda3/envs/tpseg/bin/python /root/autodl-tmp/tactile_topo_seg/tools/export_preds_unique_by_index.py --config /root/autodl-tmp/tactile_topo_seg/configs/tp_dataset/deeplabv3plus_r50_tp_main_table1_B.py --checkpoint /root/autodl-tmp/tactile_topo_seg/work_dirs/deeplabv3plus_r50_tp_main_table1_B/ckpt/deeplabv3plus_r50_tp_main_table1_B/best_mIoU_iter_9000.pth --split-file /root/autodl-tmp/tactile_topo_seg/data/TP-Dataset/Index/val.txt --out-dir /root/autodl-tmp/tactile_topo_seg/work_dirs/table2_topology/preds/deeplabv3plus_r50 --mapping-csv /root/autodl-tmp/tactile_topo_seg/work_dirs/table2_topology/preds/deeplabv3plus_r50/pred_mapping.csv --device cuda:0
+/root/autodl-tmp/tactile_topo_seg/third_party/mmsegmentation/mmseg/models/decode_heads/decode_head.py:120: UserWarning: For binary segmentation, we suggest using`out_channels = 1` to define the outputchannels of segmentor, and use `threshold`to convert `seg_logits` into a predictionapplying a threshold
+  warnings.warn('For binary segmentation, we suggest using'
+/root/autodl-tmp/tactile_topo_seg/third_party/mmsegmentation/mmseg/models/losses/cross_entropy_loss.py:250: UserWarning: Default ``avg_non_ignore`` is False, if you would like to ignore the certain label and average loss over non-ignore labels, which is the same with PyTorch official cross_entropy, set ``avg_non_ignore=True``.
+  warnings.warn(
+Loads checkpoint by local backend from path: /root/autodl-tmp/tactile_topo_seg/work_dirs/deeplabv3plus_r50_tp_main_table1_B/ckpt/deeplabv3plus_r50_tp_main_table1_B/best_mIoU_iter_9000.pth
+[INFO] exported 50/281
+[INFO] exported 100/281
+[INFO] exported 150/281
+[INFO] exported 200/281
+[INFO] exported 250/281
+[OK] prediction dir: /root/autodl-tmp/tactile_topo_seg/work_dirs/table2_topology/preds/deeplabv3plus_r50
+[OK] mapping csv   : /root/autodl-tmp/tactile_topo_seg/work_dirs/table2_topology/preds/deeplabv3plus_r50/pred_mapping.csv
+
+===== CMD =====
+/root/miniconda3/envs/tpseg/bin/python /root/autodl-tmp/tactile_topo_seg/tools/eval_tp_topology.py --pred-dir /root/autodl-tmp/tactile_topo_seg/work_dirs/table2_topology/preds/deeplabv3plus_r50 --split-file /root/autodl-tmp/tactile_topo_seg/data/TP-Dataset/Index/val.txt --gt-root /root/autodl-tmp/tactile_topo_seg/data/TP-Dataset/GroundTruth --out-csv /root/autodl-tmp/tactile_topo_seg/work_dirs/table2_topology/csv/deeplabv3plus_r50_topology_per_sample.csv --summary-csv /root/autodl-tmp/tactile_topo_seg/work_dirs/table2_topology/csv/deeplabv3plus_r50_topology_summary.csv
+[OK] per-sample csv: /root/autodl-tmp/tactile_topo_seg/work_dirs/table2_topology/csv/deeplabv3plus_r50_topology_per_sample.csv
+[OK] summary csv   : /root/autodl-tmp/tactile_topo_seg/work_dirs/table2_topology/csv/deeplabv3plus_r50_topology_summary.csv
+[SUMMARY] N=281 dice=0.8458 iou=0.7718 clDice=0.7905
