@@ -221,7 +221,8 @@ def run_one(cfg: Path, work_dir: Path, log_path: Path, env: Dict[str, str]) -> i
         str(work_dir),
     ]
     print(f"[RUN] {' '.join(cmd)}")
-    with log_path.open("w", encoding="utf-8") as f:
+    with log_path.open("a", encoding="utf-8") as f:
+        f.write(f"\n===== RUN START {time.strftime('%F %T')} =====\n")
         proc = subprocess.Popen(cmd, cwd=str(ROOT), env=env, stdout=f, stderr=subprocess.STDOUT)
         return proc.wait()
 
@@ -328,7 +329,7 @@ def main() -> None:
             continue
 
         write_cfg(cfg, str(work_dir.relative_to(ROOT)), d_w, a_w)
-        log_path = log_dir / f"train_{name}_{time.strftime('%Y%m%d_%H%M%S')}.log"
+        log_path = log_dir / f"train_{name}.log"
 
         rc = run_one(cfg, work_dir, log_path, env)
         rec["train_status"] = "ok" if rc == 0 else "failed"

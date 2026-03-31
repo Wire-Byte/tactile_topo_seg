@@ -1,0 +1,50 @@
+[START] 2026-03-30 23:56:22 guard started
+[CASES] core_main_only,w_0p20,w_0p30
+[RUN] 2026-03-30 23:56:30 case=core_main_only rc=1 max_iter=6000
+
+===== CMD 2026-03-30 23:56:30 =====
+python -u /root/autodl-tmp/tactile_topo_seg/tools/rebuild_ablation_summary.py
+[OK] wrote /root/autodl-tmp/tactile_topo_seg/work_dirs/ablation/ablation_results_master.csv
+[OK] wrote /root/autodl-tmp/tactile_topo_seg/work_dirs/ablation/ablation_logs_index.csv
+[RUN] 2026-03-30 23:56:52 case=core_main_only rc=1 max_iter=6000
+
+===== CMD 2026-03-30 23:56:52 =====
+python -u /root/autodl-tmp/tactile_topo_seg/tools/rebuild_ablation_summary.py
+[OK] wrote /root/autodl-tmp/tactile_topo_seg/work_dirs/ablation/ablation_results_master.csv
+[OK] wrote /root/autodl-tmp/tactile_topo_seg/work_dirs/ablation/ablation_logs_index.csv
+[RUN] 2026-03-30 23:57:15 case=core_main_only rc=1 max_iter=6000
+
+===== CMD 2026-03-30 23:57:15 =====
+python -u /root/autodl-tmp/tactile_topo_seg/tools/rebuild_ablation_summary.py
+[OK] wrote /root/autodl-tmp/tactile_topo_seg/work_dirs/ablation/ablation_results_master.csv
+[OK] wrote /root/autodl-tmp/tactile_topo_seg/work_dirs/ablation/ablation_logs_index.csv
+[RUN] 2026-03-30 23:57:39 case=core_main_only rc=1 max_iter=6000
+
+===== CMD 2026-03-30 23:57:39 =====
+python -u /root/autodl-tmp/tactile_topo_seg/tools/rebuild_ablation_summary.py
+[OK] wrote /root/autodl-tmp/tactile_topo_seg/work_dirs/ablation/ablation_results_master.csv
+[OK] wrote /root/autodl-tmp/tactile_topo_seg/work_dirs/ablation/ablation_logs_index.csv
+[RUN] 2026-03-30 23:58:02 case=core_main_only rc=1 max_iter=6000
+
+===== CMD 2026-03-30 23:58:02 =====
+python -u /root/autodl-tmp/tactile_topo_seg/tools/rebuild_ablation_summary.py
+[OK] wrote /root/autodl-tmp/tactile_topo_seg/work_dirs/ablation/ablation_results_master.csv
+[OK] wrote /root/autodl-tmp/tactile_topo_seg/work_dirs/ablation/ablation_logs_index.csv
+[RUN] 2026-03-30 23:58:25 case=core_main_only rc=1 max_iter=6000
+
+===== CMD 2026-03-30 23:58:25 =====
+python -u /root/autodl-tmp/tactile_topo_seg/tools/rebuild_ablation_summary.py
+[OK] wrote /root/autodl-tmp/tactile_topo_seg/work_dirs/ablation/ablation_results_master.csv
+[OK] wrote /root/autodl-tmp/tactile_topo_seg/work_dirs/ablation/ablation_logs_index.csv
+[RUN] 2026-03-30 23:58:48 case=core_main_only rc=1 max_iter=6000
+
+===== CMD 2026-03-30 23:58:48 =====
+python -u /root/autodl-tmp/tactile_topo_seg/tools/rebuild_ablation_summary.py
+[OK] wrote /root/autodl-tmp/tactile_topo_seg/work_dirs/ablation/ablation_results_master.csv
+[OK] wrote /root/autodl-tmp/tactile_topo_seg/work_dirs/ablation/ablation_logs_index.csv
+[RUN] 2026-03-30 23:59:11 case=core_main_only rc=1 max_iter=6000
+
+===== CMD 2026-03-30 23:59:11 =====
+python -u /root/autodl-tmp/tactile_topo_seg/tools/rebuild_ablation_summary.py
+[OK] wrote /root/autodl-tmp/tactile_topo_seg/work_dirs/ablation/ablation_results_master.csv
+[OK] wrote /root/autodl-tmp/tactile_topo_seg/work_dirs/ablation/ablation_logs_index.csv

@@ -1,0 +1,5 @@
+[START] 2026-03-31 00:00:05 guard started
+[CASES] core_main_only,w_0p20,w_0p30
+[WAIT] 2026-03-31 00:00:05 another ablation train is active; hold core_main_only
+[WAIT] 2026-03-31 00:01:35 another ablation train is active; hold core_main_only
+[WAIT] 2026-03-31 00:03:05 another ablation train is active; hold core_main_only
