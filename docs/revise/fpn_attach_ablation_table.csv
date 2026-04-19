@@ -1,0 +1,5 @@
+Attach,status,best_iter,aAcc,mIoU,mDice,mFscore,mPrecision,mRecall,config,work_dir,log
+F1,ok,9000,95.48,83.86,90.83,90.83,89.87,91.88,configs/tp_dataset/segformer_b2_tp_skel_clDice_v2_4090_bs4_F1.py,work_dirs/segformer_b2_tp_skel_cldice_v2_4090_bs4_F1,logs/revise/train_segformer_b2_tp_skel_cldice_v2_4090_bs4_F1.log
+F2,missing_log,,,,,,,,configs/tp_dataset/segformer_b2_tp_skel_clDice_v2_4090_bs4.py,work_dirs/segformer_b2_tp_skel_cldice_v2_4090_bs4,logs/revise/train_segformer_b2_tp_skel_cldice_v2_4090_bs4_F2.log
+F3,ok,3500,94.21,79.17,87.65,87.65,88.62,86.75,configs/tp_dataset/segformer_b2_tp_skel_clDice_v2_4090_bs4_F3.py,work_dirs/segformer_b2_tp_skel_cldice_v2_4090_bs4_F3,logs/revise/train_segformer_b2_tp_skel_cldice_v2_4090_bs4_F3.log
+F4,ok,10000,96.01,85.32,91.75,91.75,91.45,92.06,configs/tp_dataset/segformer_b2_tp_skel_clDice_v2_4090_bs4_F4.py,work_dirs/segformer_b2_tp_skel_cldice_v2_4090_bs4_F4,logs/revise/train_segformer_b2_tp_skel_cldice_v2_4090_bs4_F4.log

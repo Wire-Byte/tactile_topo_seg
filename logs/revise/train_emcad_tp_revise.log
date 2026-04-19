@@ -1,0 +1,294 @@
+/root/miniconda3/envs/tpseg/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/tpseg/lib/python3.10/site-packages/timm/models/registry.py:4: FutureWarning: Importing from timm.models.registry is deprecated, please import via timm.models
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.models", FutureWarning)
+/root/autodl-tmp/tactile_topo_seg/third_party/revise_models/emcad/lib/pvtv2.py:386: UserWarning: Overwriting pvt_v2_b0 in registry with lib.pvtv2.pvt_v2_b0. This is because the name being registered conflicts with an existing name. Please check if this is not expected.
+  class pvt_v2_b0(PyramidVisionTransformerImpr):
+/root/autodl-tmp/tactile_topo_seg/third_party/revise_models/emcad/lib/pvtv2.py:396: UserWarning: Overwriting pvt_v2_b1 in registry with lib.pvtv2.pvt_v2_b1. This is because the name being registered conflicts with an existing name. Please check if this is not expected.
+  class pvt_v2_b1(PyramidVisionTransformerImpr):
+/root/autodl-tmp/tactile_topo_seg/third_party/revise_models/emcad/lib/pvtv2.py:404: UserWarning: Overwriting pvt_v2_b2 in registry with lib.pvtv2.pvt_v2_b2. This is because the name being registered conflicts with an existing name. Please check if this is not expected.
+  class pvt_v2_b2(PyramidVisionTransformerImpr):
+/root/autodl-tmp/tactile_topo_seg/third_party/revise_models/emcad/lib/pvtv2.py:412: UserWarning: Overwriting pvt_v2_b3 in registry with lib.pvtv2.pvt_v2_b3. This is because the name being registered conflicts with an existing name. Please check if this is not expected.
+  class pvt_v2_b3(PyramidVisionTransformerImpr):
+/root/autodl-tmp/tactile_topo_seg/third_party/revise_models/emcad/lib/pvtv2.py:420: UserWarning: Overwriting pvt_v2_b4 in registry with lib.pvtv2.pvt_v2_b4. This is because the name being registered conflicts with an existing name. Please check if this is not expected.
+  class pvt_v2_b4(PyramidVisionTransformerImpr):
+/root/autodl-tmp/tactile_topo_seg/third_party/revise_models/emcad/lib/pvtv2.py:429: UserWarning: Overwriting pvt_v2_b5 in registry with lib.pvtv2.pvt_v2_b5. This is because the name being registered conflicts with an existing name. Please check if this is not expected.
+  class pvt_v2_b5(PyramidVisionTransformerImpr):
+/root/miniconda3/envs/tpseg/lib/python3.10/site-packages/timm/models/helpers.py:7: FutureWarning: Importing from timm.models.helpers is deprecated, please import via timm.models
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.models", FutureWarning)
+Model pvt_v2_b0 backbone:  created, param count: 3409760
+Model EMCAD decoder:  created, param count: 506507
+/root/miniconda3/envs/tpseg/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:136: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  warnings.warn("Detected call of `lr_scheduler.step()` before `optimizer.step()`. "
+[2026-04-18 17:37:33,751] iter=50/10000 lr=0.0002985 loss=0.649407
+[2026-04-18 17:37:46,859] iter=100/10000 lr=0.000297 loss=0.534972
+[2026-04-18 17:38:01,334] iter=150/10000 lr=0.0002955 loss=0.392608
+[2026-04-18 17:38:11,939] iter=200/10000 lr=0.000294 loss=0.700621
+[2026-04-18 17:38:24,562] iter=250/10000 lr=0.0002925 loss=0.453944
+[2026-04-18 17:38:38,096] iter=300/10000 lr=0.000291 loss=0.310407
+[2026-04-18 17:38:51,626] iter=350/10000 lr=0.0002895 loss=0.870339
+[2026-04-18 17:39:04,912] iter=400/10000 lr=0.000288 loss=0.521442
+[2026-04-18 17:39:17,499] iter=450/10000 lr=0.0002865 loss=0.654385
+[2026-04-18 17:39:31,864] iter=500/10000 lr=0.000285 loss=0.780240
+[2026-04-18 17:39:44,046] [VAL] iter=500 aAcc=86.5901 mIoU=45.0531 mDice=49.8467 mFscore=49.8467 mPrecision=73.0426 mRecall=51.6387
+[2026-04-18 17:39:44,358] [BEST] iter=500 mIoU=45.0531 saved=/root/autodl-tmp/tactile_topo_seg/work_dirs/revise/emcad_tp_revise/ckpt/best_mIoU_iter_500.pth
+[2026-04-18 17:39:58,545] iter=550/10000 lr=0.0002835 loss=0.903046
+[2026-04-18 17:40:10,992] iter=600/10000 lr=0.000282 loss=0.746790
+[2026-04-18 17:40:23,027] iter=650/10000 lr=0.0002805 loss=0.984232
+[2026-04-18 17:40:37,984] iter=700/10000 lr=0.000279 loss=0.402912
+[2026-04-18 17:40:50,609] iter=750/10000 lr=0.0002775 loss=0.433474
+[2026-04-18 17:41:03,612] iter=800/10000 lr=0.000276 loss=0.540260
+[2026-04-18 17:41:19,099] iter=850/10000 lr=0.0002745 loss=0.300110
+[2026-04-18 17:41:31,990] iter=900/10000 lr=0.000273 loss=0.422575
+[2026-04-18 17:41:44,500] iter=950/10000 lr=0.0002715 loss=0.709986
+[2026-04-18 17:41:59,037] iter=1000/10000 lr=0.00027 loss=0.646576
+[2026-04-18 17:42:10,917] [VAL] iter=1000 aAcc=87.2063 mIoU=46.6519 mDice=52.3957 mFscore=52.3957 mPrecision=89.5368 mRecall=53.0773
+[2026-04-18 17:42:11,249] [BEST] iter=1000 mIoU=46.6519 saved=/root/autodl-tmp/tactile_topo_seg/work_dirs/revise/emcad_tp_revise/ckpt/best_mIoU_iter_1000.pth
+[2026-04-18 17:42:20,521] iter=1050/10000 lr=0.0002685 loss=0.649290
+[2026-04-18 17:42:38,431] iter=1100/10000 lr=0.000267 loss=0.722681
+[2026-04-18 17:42:49,559] iter=1150/10000 lr=0.0002655 loss=0.719090
+[2026-04-18 17:43:02,816] iter=1200/10000 lr=0.000264 loss=0.336221
+[2026-04-18 17:43:16,000] iter=1250/10000 lr=0.0002625 loss=0.276999
+[2026-04-18 17:43:28,235] iter=1300/10000 lr=0.000261 loss=0.308130
+[2026-04-18 17:43:40,023] iter=1350/10000 lr=0.0002595 loss=0.366178
+[2026-04-18 17:43:54,761] iter=1400/10000 lr=0.000258 loss=0.553783
+[2026-04-18 17:44:07,394] iter=1450/10000 lr=0.0002565 loss=0.286435
+[2026-04-18 17:44:21,192] iter=1500/10000 lr=0.000255 loss=0.558869
+[2026-04-18 17:44:33,095] [VAL] iter=1500 aAcc=59.4988 mIoU=38.1357 mDice=53.2103 mFscore=53.2103 mPrecision=59.3341 mRecall=69.9010
+[2026-04-18 17:44:47,775] iter=1550/10000 lr=0.0002535 loss=0.880940
+[2026-04-18 17:45:00,193] iter=1600/10000 lr=0.000252 loss=0.536479
+[2026-04-18 17:45:15,459] iter=1650/10000 lr=0.0002505 loss=0.185440
+[2026-04-18 17:45:31,832] iter=1700/10000 lr=0.000249 loss=0.427860
+[2026-04-18 17:45:48,028] iter=1750/10000 lr=0.0002475 loss=0.318702
+[2026-04-18 17:46:02,033] iter=1800/10000 lr=0.000246 loss=0.253165
+[2026-04-18 17:46:14,533] iter=1850/10000 lr=0.0002445 loss=0.642322
+[2026-04-18 17:46:26,573] iter=1900/10000 lr=0.000243 loss=0.279271
+[2026-04-18 17:46:41,181] iter=1950/10000 lr=0.0002415 loss=0.382505
+[2026-04-18 17:46:53,803] iter=2000/10000 lr=0.00024 loss=0.274402
+[2026-04-18 17:47:05,636] [VAL] iter=2000 aAcc=87.4744 mIoU=48.2095 mDice=54.9582 mFscore=54.9582 mPrecision=86.4545 mRecall=54.4998
+[2026-04-18 17:47:06,125] [BEST] iter=2000 mIoU=48.2095 saved=/root/autodl-tmp/tactile_topo_seg/work_dirs/revise/emcad_tp_revise/ckpt/best_mIoU_iter_2000.pth
+[2026-04-18 17:47:17,541] iter=2050/10000 lr=0.0002385 loss=0.530222
+[2026-04-18 17:47:32,167] iter=2100/10000 lr=0.000237 loss=0.293955
+[2026-04-18 17:47:45,097] iter=2150/10000 lr=0.0002355 loss=0.888981
+[2026-04-18 17:47:59,303] iter=2200/10000 lr=0.000234 loss=0.655591
+[2026-04-18 17:48:12,156] iter=2250/10000 lr=0.0002325 loss=0.428242
+[2026-04-18 17:48:22,354] iter=2300/10000 lr=0.000231 loss=0.247052
+[2026-04-18 17:48:39,895] iter=2350/10000 lr=0.0002295 loss=0.661952
+[2026-04-18 17:48:54,489] iter=2400/10000 lr=0.000228 loss=0.925425
+[2026-04-18 17:49:06,189] iter=2450/10000 lr=0.0002265 loss=0.520373
+[2026-04-18 17:49:22,314] iter=2500/10000 lr=0.000225 loss=0.304646
+[2026-04-18 17:49:34,768] [VAL] iter=2500 aAcc=84.5217 mIoU=58.0017 mDice=70.0993 mFscore=70.0993 mPrecision=68.5527 mRecall=72.3081
+[2026-04-18 17:49:35,111] [BEST] iter=2500 mIoU=58.0017 saved=/root/autodl-tmp/tactile_topo_seg/work_dirs/revise/emcad_tp_revise/ckpt/best_mIoU_iter_2500.pth
+[2026-04-18 17:49:43,557] iter=2550/10000 lr=0.0002235 loss=0.685041
+[2026-04-18 17:49:58,746] iter=2600/10000 lr=0.000222 loss=0.247244
+[2026-04-18 17:50:12,928] iter=2650/10000 lr=0.0002205 loss=0.330451
+[2026-04-18 17:50:27,793] iter=2700/10000 lr=0.000219 loss=0.425461
+[2026-04-18 17:50:42,369] iter=2750/10000 lr=0.0002175 loss=0.317873
+[2026-04-18 17:50:55,992] iter=2800/10000 lr=0.000216 loss=0.325870
+[2026-04-18 17:51:08,724] iter=2850/10000 lr=0.0002145 loss=0.278664
+[2026-04-18 17:51:24,996] iter=2900/10000 lr=0.000213 loss=0.382097
+[2026-04-18 17:51:38,405] iter=2950/10000 lr=0.0002115 loss=0.692531
+[2026-04-18 17:51:51,395] iter=3000/10000 lr=0.00021 loss=0.554164
+[2026-04-18 17:52:03,619] [VAL] iter=3000 aAcc=89.6521 mIoU=61.1217 mDice=72.0131 mFscore=72.0131 mPrecision=81.8814 mRecall=67.8069
+[2026-04-18 17:52:03,908] [BEST] iter=3000 mIoU=61.1217 saved=/root/autodl-tmp/tactile_topo_seg/work_dirs/revise/emcad_tp_revise/ckpt/best_mIoU_iter_3000.pth
+[2026-04-18 17:52:15,974] iter=3050/10000 lr=0.0002085 loss=0.382181
+[2026-04-18 17:52:29,435] iter=3100/10000 lr=0.000207 loss=0.378354
+[2026-04-18 17:52:40,162] iter=3150/10000 lr=0.0002055 loss=1.171108
+[2026-04-18 17:52:55,147] iter=3200/10000 lr=0.000204 loss=0.616202
+[2026-04-18 17:53:06,352] iter=3250/10000 lr=0.0002025 loss=0.545817
+[2026-04-18 17:53:18,333] iter=3300/10000 lr=0.000201 loss=0.376632
+[2026-04-18 17:53:31,636] iter=3350/10000 lr=0.0001995 loss=0.455483
+[2026-04-18 17:53:45,464] iter=3400/10000 lr=0.000198 loss=0.397966
+[2026-04-18 17:54:00,500] iter=3450/10000 lr=0.0001965 loss=0.374404
+[2026-04-18 17:54:15,993] iter=3500/10000 lr=0.000195 loss=0.938630
+[2026-04-18 17:54:28,502] [VAL] iter=3500 aAcc=87.4416 mIoU=61.6790 mDice=73.3256 mFscore=73.3256 mPrecision=73.2378 mRecall=73.4146
+[2026-04-18 17:54:28,950] [BEST] iter=3500 mIoU=61.6790 saved=/root/autodl-tmp/tactile_topo_seg/work_dirs/revise/emcad_tp_revise/ckpt/best_mIoU_iter_3500.pth
+[2026-04-18 17:54:36,927] iter=3550/10000 lr=0.0001935 loss=0.575614
+[2026-04-18 17:54:49,299] iter=3600/10000 lr=0.000192 loss=0.295654
+[2026-04-18 17:55:02,166] iter=3650/10000 lr=0.0001905 loss=0.320271
+[2026-04-18 17:55:16,780] iter=3700/10000 lr=0.000189 loss=0.392028
+[2026-04-18 17:55:29,705] iter=3750/10000 lr=0.0001875 loss=0.303222
+[2026-04-18 17:55:42,721] iter=3800/10000 lr=0.000186 loss=0.345285
+[2026-04-18 17:55:57,909] iter=3850/10000 lr=0.0001845 loss=0.300298
+[2026-04-18 17:56:12,954] iter=3900/10000 lr=0.000183 loss=0.644291
+[2026-04-18 17:56:27,930] iter=3950/10000 lr=0.0001815 loss=0.200174
+[2026-04-18 17:56:43,205] iter=4000/10000 lr=0.00018 loss=0.215276
+[2026-04-18 17:56:55,216] [VAL] iter=4000 aAcc=85.7400 mIoU=61.2261 mDice=73.3409 mFscore=73.3409 mPrecision=71.1161 mRecall=76.8521
+[2026-04-18 17:57:03,736] iter=4050/10000 lr=0.0001785 loss=0.237333
+[2026-04-18 17:57:16,534] iter=4100/10000 lr=0.000177 loss=0.208262
+[2026-04-18 17:57:30,045] iter=4150/10000 lr=0.0001755 loss=0.368824
+[2026-04-18 17:57:42,846] iter=4200/10000 lr=0.000174 loss=0.237121
+[2026-04-18 17:57:58,284] iter=4250/10000 lr=0.0001725 loss=0.232844
+[2026-04-18 17:58:11,943] iter=4300/10000 lr=0.000171 loss=0.198439
+[2026-04-18 17:58:22,897] iter=4350/10000 lr=0.0001695 loss=0.462515
+[2026-04-18 17:58:38,664] iter=4400/10000 lr=0.000168 loss=0.203482
+[2026-04-18 17:58:51,559] iter=4450/10000 lr=0.0001665 loss=0.313424
+[2026-04-18 17:59:04,176] iter=4500/10000 lr=0.000165 loss=0.170498
+[2026-04-18 17:59:15,993] [VAL] iter=4500 aAcc=88.4559 mIoU=63.4845 mDice=74.9622 mFscore=74.9622 mPrecision=75.4069 mRecall=74.5422
+[2026-04-18 17:59:16,289] [BEST] iter=4500 mIoU=63.4845 saved=/root/autodl-tmp/tactile_topo_seg/work_dirs/revise/emcad_tp_revise/ckpt/best_mIoU_iter_4500.pth
+[2026-04-18 17:59:30,106] iter=4550/10000 lr=0.0001635 loss=0.585487
+[2026-04-18 17:59:39,526] iter=4600/10000 lr=0.000162 loss=0.548164
+[2026-04-18 17:59:52,646] iter=4650/10000 lr=0.0001605 loss=0.203771
+[2026-04-18 18:00:08,334] iter=4700/10000 lr=0.000159 loss=0.285312
+[2026-04-18 18:00:19,738] iter=4750/10000 lr=0.0001575 loss=0.676340
+[2026-04-18 18:00:37,367] iter=4800/10000 lr=0.000156 loss=0.155625
+[2026-04-18 18:00:49,493] iter=4850/10000 lr=0.0001545 loss=0.235207
+[2026-04-18 18:01:01,539] iter=4900/10000 lr=0.000153 loss=0.284978
+[2026-04-18 18:01:15,976] iter=4950/10000 lr=0.0001515 loss=0.177270
+[2026-04-18 18:01:28,387] iter=5000/10000 lr=0.00015 loss=0.252851
+[2026-04-18 18:01:40,722] [VAL] iter=5000 aAcc=89.6344 mIoU=63.6165 mDice=74.7675 mFscore=74.7675 mPrecision=79.3232 mRecall=71.8547
+[2026-04-18 18:01:41,054] [BEST] iter=5000 mIoU=63.6165 saved=/root/autodl-tmp/tactile_topo_seg/work_dirs/revise/emcad_tp_revise/ckpt/best_mIoU_iter_5000.pth
+[2026-04-18 18:01:50,414] iter=5050/10000 lr=0.0001485 loss=0.363109
+[2026-04-18 18:02:06,129] iter=5100/10000 lr=0.000147 loss=0.350467
+[2026-04-18 18:02:20,009] iter=5150/10000 lr=0.0001455 loss=0.299357
+[2026-04-18 18:02:32,775] iter=5200/10000 lr=0.000144 loss=0.154012
+[2026-04-18 18:02:46,450] iter=5250/10000 lr=0.0001425 loss=0.726357
+[2026-04-18 18:03:00,932] iter=5300/10000 lr=0.000141 loss=0.916163
+[2026-04-18 18:03:15,692] iter=5350/10000 lr=0.0001395 loss=0.269781
+[2026-04-18 18:03:28,962] iter=5400/10000 lr=0.000138 loss=0.429549
+[2026-04-18 18:03:43,989] iter=5450/10000 lr=0.0001365 loss=0.316584
+[2026-04-18 18:04:00,693] iter=5500/10000 lr=0.000135 loss=0.139067
+[2026-04-18 18:04:12,116] [VAL] iter=5500 aAcc=89.6088 mIoU=64.5271 mDice=75.7285 mFscore=75.7285 mPrecision=78.6560 mRecall=73.5659
+[2026-04-18 18:04:12,542] [BEST] iter=5500 mIoU=64.5271 saved=/root/autodl-tmp/tactile_topo_seg/work_dirs/revise/emcad_tp_revise/ckpt/best_mIoU_iter_5500.pth
+[2026-04-18 18:04:22,199] iter=5550/10000 lr=0.0001335 loss=0.679191
+[2026-04-18 18:04:35,616] iter=5600/10000 lr=0.000132 loss=0.260998
+[2026-04-18 18:04:50,087] iter=5650/10000 lr=0.0001305 loss=0.212832
+[2026-04-18 18:05:04,139] iter=5700/10000 lr=0.000129 loss=0.297477
+[2026-04-18 18:05:16,200] iter=5750/10000 lr=0.0001275 loss=0.268336
+[2026-04-18 18:05:31,565] iter=5800/10000 lr=0.000126 loss=0.319439
+[2026-04-18 18:05:44,287] iter=5850/10000 lr=0.0001245 loss=0.109868
+[2026-04-18 18:06:02,225] iter=5900/10000 lr=0.000123 loss=0.427270
+[2026-04-18 18:06:13,003] iter=5950/10000 lr=0.0001215 loss=0.345121
+[2026-04-18 18:06:23,999] iter=6000/10000 lr=0.00012 loss=0.330841
+[2026-04-18 18:06:36,304] [VAL] iter=6000 aAcc=88.9814 mIoU=64.8338 mDice=76.2117 mFscore=76.2117 mPrecision=76.5492 mRecall=75.8878
+[2026-04-18 18:06:36,649] [BEST] iter=6000 mIoU=64.8338 saved=/root/autodl-tmp/tactile_topo_seg/work_dirs/revise/emcad_tp_revise/ckpt/best_mIoU_iter_6000.pth
+[2026-04-18 18:06:49,349] iter=6050/10000 lr=0.0001185 loss=0.297481
+[2026-04-18 18:07:01,142] iter=6100/10000 lr=0.000117 loss=0.521305
+[2026-04-18 18:07:15,131] iter=6150/10000 lr=0.0001155 loss=0.737725
+[2026-04-18 18:07:28,413] iter=6200/10000 lr=0.000114 loss=0.219152
+[2026-04-18 18:07:39,052] iter=6250/10000 lr=0.0001125 loss=0.171999
+[2026-04-18 18:07:50,201] iter=6300/10000 lr=0.000111 loss=0.249324
+[2026-04-18 18:08:06,058] iter=6350/10000 lr=0.0001095 loss=0.629041
+[2026-04-18 18:08:17,910] iter=6400/10000 lr=0.000108 loss=0.341311
+[2026-04-18 18:08:32,343] iter=6450/10000 lr=0.0001065 loss=0.343488
+[2026-04-18 18:08:48,784] iter=6500/10000 lr=0.000105 loss=0.165154
+[2026-04-18 18:09:00,897] [VAL] iter=6500 aAcc=89.9279 mIoU=67.8021 mDice=78.8874 mFscore=78.8874 mPrecision=78.4151 mRecall=79.3862
+[2026-04-18 18:09:01,223] [BEST] iter=6500 mIoU=67.8021 saved=/root/autodl-tmp/tactile_topo_seg/work_dirs/revise/emcad_tp_revise/ckpt/best_mIoU_iter_6500.pth
+[2026-04-18 18:09:11,292] iter=6550/10000 lr=0.0001035 loss=0.294034
+[2026-04-18 18:09:24,281] iter=6600/10000 lr=0.000102 loss=0.182689
+[2026-04-18 18:09:36,372] iter=6650/10000 lr=0.0001005 loss=0.251741
+[2026-04-18 18:09:49,910] iter=6700/10000 lr=9.9e-05 loss=0.144925
+[2026-04-18 18:10:07,489] iter=6750/10000 lr=9.75e-05 loss=0.109935
+[2026-04-18 18:10:18,229] iter=6800/10000 lr=9.6e-05 loss=0.477196
+[2026-04-18 18:10:30,310] iter=6850/10000 lr=9.45e-05 loss=0.189439
+[2026-04-18 18:10:45,378] iter=6900/10000 lr=9.3e-05 loss=0.249832
+[2026-04-18 18:10:57,771] iter=6950/10000 lr=9.15e-05 loss=0.210365
+[2026-04-18 18:11:14,380] iter=7000/10000 lr=9e-05 loss=0.409457
+[2026-04-18 18:11:25,939] [VAL] iter=7000 aAcc=90.8896 mIoU=68.3098 mDice=79.1448 mFscore=79.1448 mPrecision=81.5946 mRecall=77.1958
+[2026-04-18 18:11:26,224] [BEST] iter=7000 mIoU=68.3098 saved=/root/autodl-tmp/tactile_topo_seg/work_dirs/revise/emcad_tp_revise/ckpt/best_mIoU_iter_7000.pth
+[2026-04-18 18:11:37,409] iter=7050/10000 lr=8.85e-05 loss=0.424891
+[2026-04-18 18:11:49,253] iter=7100/10000 lr=8.7e-05 loss=0.116672
+[2026-04-18 18:12:03,092] iter=7150/10000 lr=8.55e-05 loss=0.176869
+[2026-04-18 18:12:15,407] iter=7200/10000 lr=8.4e-05 loss=0.210738
+[2026-04-18 18:12:27,688] iter=7250/10000 lr=8.25e-05 loss=0.194259
+[2026-04-18 18:12:40,775] iter=7300/10000 lr=8.1e-05 loss=0.337544
+[2026-04-18 18:12:53,784] iter=7350/10000 lr=7.95e-05 loss=0.276776
+[2026-04-18 18:13:10,346] iter=7400/10000 lr=7.8e-05 loss=0.123426
+[2026-04-18 18:13:24,686] iter=7450/10000 lr=7.65e-05 loss=0.261988
+[2026-04-18 18:13:36,105] iter=7500/10000 lr=7.5e-05 loss=0.681074
+[2026-04-18 18:13:48,239] [VAL] iter=7500 aAcc=89.9447 mIoU=67.5222 mDice=78.6174 mFscore=78.6174 mPrecision=78.5424 mRecall=78.6932
+[2026-04-18 18:14:01,650] iter=7550/10000 lr=7.35e-05 loss=0.231446
+[2026-04-18 18:14:14,249] iter=7600/10000 lr=7.2e-05 loss=0.193693
+[2026-04-18 18:14:27,443] iter=7650/10000 lr=7.05e-05 loss=0.223322
+[2026-04-18 18:14:42,290] iter=7700/10000 lr=6.9e-05 loss=0.128575
+[2026-04-18 18:14:54,797] iter=7750/10000 lr=6.75e-05 loss=0.203973
+[2026-04-18 18:15:08,753] iter=7800/10000 lr=6.6e-05 loss=0.078084
+[2026-04-18 18:15:22,409] iter=7850/10000 lr=6.45e-05 loss=0.251198
+[2026-04-18 18:15:34,997] iter=7900/10000 lr=6.3e-05 loss=0.323521
+[2026-04-18 18:15:51,702] iter=7950/10000 lr=6.15e-05 loss=0.074950
+[2026-04-18 18:16:09,917] iter=8000/10000 lr=6e-05 loss=0.197369
+[2026-04-18 18:16:22,021] [VAL] iter=8000 aAcc=91.1560 mIoU=68.7554 mDice=79.5030 mFscore=79.5030 mPrecision=82.5017 mRecall=77.2099
+[2026-04-18 18:16:22,351] [BEST] iter=8000 mIoU=68.7554 saved=/root/autodl-tmp/tactile_topo_seg/work_dirs/revise/emcad_tp_revise/ckpt/best_mIoU_iter_8000.pth
+[2026-04-18 18:16:34,352] iter=8050/10000 lr=5.85e-05 loss=0.300036
+[2026-04-18 18:16:47,424] iter=8100/10000 lr=5.7e-05 loss=0.199914
+[2026-04-18 18:16:58,969] iter=8150/10000 lr=5.55e-05 loss=0.219664
+[2026-04-18 18:17:11,557] iter=8200/10000 lr=5.4e-05 loss=0.269428
+[2026-04-18 18:17:28,112] iter=8250/10000 lr=5.25e-05 loss=0.167724
+[2026-04-18 18:17:40,436] iter=8300/10000 lr=5.1e-05 loss=0.202134
+[2026-04-18 18:17:52,818] iter=8350/10000 lr=4.95e-05 loss=0.260227
+[2026-04-18 18:18:07,690] iter=8400/10000 lr=4.8e-05 loss=0.366201
+[2026-04-18 18:18:22,185] iter=8450/10000 lr=4.65e-05 loss=0.202652
+[2026-04-18 18:18:35,574] iter=8500/10000 lr=4.5e-05 loss=0.176450
+[2026-04-18 18:18:47,920] [VAL] iter=8500 aAcc=90.6082 mIoU=69.1552 mDice=79.9965 mFscore=79.9965 mPrecision=79.9654 mRecall=80.0278
+[2026-04-18 18:18:48,258] [BEST] iter=8500 mIoU=69.1552 saved=/root/autodl-tmp/tactile_topo_seg/work_dirs/revise/emcad_tp_revise/ckpt/best_mIoU_iter_8500.pth
+[2026-04-18 18:18:58,407] iter=8550/10000 lr=4.35e-05 loss=0.503425
+[2026-04-18 18:19:11,375] iter=8600/10000 lr=4.2e-05 loss=0.210236
+[2026-04-18 18:19:28,220] iter=8650/10000 lr=4.05e-05 loss=0.204287
+[2026-04-18 18:19:38,516] iter=8700/10000 lr=3.9e-05 loss=0.542628
+[2026-04-18 18:19:51,261] iter=8750/10000 lr=3.75e-05 loss=0.157485
+[2026-04-18 18:20:06,542] iter=8800/10000 lr=3.6e-05 loss=0.481371
+[2026-04-18 18:20:19,786] iter=8850/10000 lr=3.45e-05 loss=0.160100
+[2026-04-18 18:20:32,362] iter=8900/10000 lr=3.3e-05 loss=0.215134
+[2026-04-18 18:20:45,144] iter=8950/10000 lr=3.15e-05 loss=0.221278
+[2026-04-18 18:20:58,875] iter=9000/10000 lr=3e-05 loss=0.234936
+[2026-04-18 18:21:11,085] [VAL] iter=9000 aAcc=90.0333 mIoU=68.3697 mDice=79.3966 mFscore=79.3966 mPrecision=78.5505 mRecall=80.3305
+[2026-04-18 18:21:25,102] iter=9050/10000 lr=2.85e-05 loss=0.108236
+[2026-04-18 18:21:36,569] iter=9100/10000 lr=2.7e-05 loss=0.138389
+[2026-04-18 18:21:48,645] iter=9150/10000 lr=2.55e-05 loss=0.744961
+[2026-04-18 18:22:04,198] iter=9200/10000 lr=2.4e-05 loss=0.138847
+[2026-04-18 18:22:15,793] iter=9250/10000 lr=2.25e-05 loss=0.234125
+[2026-04-18 18:22:30,414] iter=9300/10000 lr=2.1e-05 loss=0.180978
+[2026-04-18 18:22:44,736] iter=9350/10000 lr=1.95e-05 loss=0.425544
+[2026-04-18 18:22:55,512] iter=9400/10000 lr=1.8e-05 loss=0.166254
+[2026-04-18 18:23:10,302] iter=9450/10000 lr=1.65e-05 loss=0.372531
+[2026-04-18 18:23:25,351] iter=9500/10000 lr=1.5e-05 loss=0.119485
+[2026-04-18 18:23:37,961] [VAL] iter=9500 aAcc=90.4178 mIoU=68.9726 mDice=79.8702 mFscore=79.8702 mPrecision=79.4425 mRecall=80.3185
+[2026-04-18 18:23:48,103] iter=9550/10000 lr=1.35e-05 loss=0.263736
+[2026-04-18 18:24:03,848] iter=9600/10000 lr=1.2e-05 loss=0.084118
+[2026-04-18 18:24:17,900] iter=9650/10000 lr=1.05e-05 loss=0.384235
+[2026-04-18 18:24:31,176] iter=9700/10000 lr=9e-06 loss=0.083852
+[2026-04-18 18:24:46,264] iter=9750/10000 lr=7.5e-06 loss=0.333192
+[2026-04-18 18:24:58,829] iter=9800/10000 lr=6e-06 loss=0.148930
+[2026-04-18 18:25:12,063] iter=9850/10000 lr=4.5e-06 loss=0.602685
+[2026-04-18 18:25:28,905] iter=9900/10000 lr=3e-06 loss=0.266466
+[2026-04-18 18:25:43,666] iter=9950/10000 lr=1.5e-06 loss=0.960521
+[2026-04-18 18:25:54,623] iter=10000/10000 lr=0 loss=0.126955
+[2026-04-18 18:26:06,821] [VAL] iter=10000 aAcc=91.4186 mIoU=70.1425 mDice=80.7228 mFscore=80.7228 mPrecision=82.5345 mRecall=79.1878
+[2026-04-18 18:26:07,169] [BEST] iter=10000 mIoU=70.1425 saved=/root/autodl-tmp/tactile_topo_seg/work_dirs/revise/emcad_tp_revise/ckpt/best_mIoU_iter_10000.pth
+[OK] per-sample csv: /root/autodl-tmp/tactile_topo_seg/work_dirs/revise/emcad_tp_revise/metrics/topology_per_sample.csv
+[OK] summary csv   : /root/autodl-tmp/tactile_topo_seg/work_dirs/revise/emcad_tp_revise/metrics/topology_summary.csv
+[SUMMARY] N=281 dice=0.5442 iou=0.4592 clDice=0.4641
+[2026-04-18 19:00:56,948] [DONE] summary=/root/autodl-tmp/tactile_topo_seg/work_dirs/revise/emcad_tp_revise/metrics/final_summary.json
+{
+  "experiment_name": "emcad_tp_revise",
+  "model_name": "emcad",
+  "config": "configs/tp_dataset/emcad_tp_revise.py",
+  "work_dir": "work_dirs/revise/emcad_tp_revise",
+  "log_file": "logs/revise/train_emcad_tp_revise.log",
+  "best_iter": 10000,
+  "best_checkpoint": "work_dirs/revise/emcad_tp_revise/ckpt/best_mIoU.pth",
+  "best_val_metrics": {
+    "aAcc": 0.9141862672418887,
+    "mIoU": 0.7014245867672806,
+    "mAcc": 0.7918777944136746,
+    "mDice": 0.8072282699853381,
+    "mFscore": 0.8072282699848392,
+    "mPrecision": 0.8253448965779493,
+    "mRecall": 0.7918777944136746
+  },
+  "pred_dir": "work_dirs/revise/emcad_tp_revise/preds_best",
+  "mapping_csv": "work_dirs/revise/emcad_tp_revise/preds_best/pred_mapping.csv",
+  "topology_csv": "work_dirs/revise/emcad_tp_revise/metrics/topology_per_sample.csv",
+  "topology_summary_csv": "work_dirs/revise/emcad_tp_revise/metrics/topology_summary.csv",
+  "topology_v2_csv": "work_dirs/revise/emcad_tp_revise/metrics/topology_v2_per_sample.csv",
+  "topology_v2_summary_csv": "work_dirs/revise/emcad_tp_revise/metrics/topology_v2_summary.csv",
+  "topology_v2_summary": {
+    "mean_T_prec": 0.584217684357,
+    "mean_T_sens": 0.49264500616,
+    "mean_clDice": 0.46408201096,
+    "mean_Betti_Error": 17.494661921708,
+    "mean_abs_dBeta0": 10.775800711744,
+    "mean_abs_dBeta1": 6.718861209964,
+    "samples": 281
+  }
+}

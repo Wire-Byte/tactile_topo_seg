@@ -78,4 +78,4 @@ work_dirs/**
 *.7z
 #屏蔽work_dirs下的所有文件
 work_dirs/**
-!work_dirs/segformer_b2_tp/preds.pkl
+
