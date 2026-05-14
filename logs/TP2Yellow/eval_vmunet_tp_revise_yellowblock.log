@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "/root/autodl-tmp/tactile_topo_seg/tools/eval_tp_topology.py", line 27, in _import_cv2
+    import cv2  # type: ignore
+ModuleNotFoundError: No module named 'cv2'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "tools/TP2Yellow/eval_revise_external_tp2yellow.py", line 306, in <module>
+    main()
+  File "tools/TP2Yellow/eval_revise_external_tp2yellow.py", line 274, in main
+    topo_per, topo_summary, topo2_per, topo2_sum = _run_topology_eval(preds_dir, mapping_csv, metrics_dir)
+  File "tools/TP2Yellow/eval_revise_external_tp2yellow.py", line 64, in _run_topology_eval
+    pred = read_mask_as_binary(pred_path)
+  File "/root/autodl-tmp/tactile_topo_seg/tools/eval_tp_topology.py", line 37, in read_mask_as_binary
+    cv2 = _import_cv2()
+  File "/root/autodl-tmp/tactile_topo_seg/tools/eval_tp_topology.py", line 29, in _import_cv2
+    raise RuntimeError(
+RuntimeError: opencv-python is required for topology evaluation. Please install opencv-python or opencv-python-headless.

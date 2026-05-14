@@ -1,0 +1,15 @@
+[INFO] built 25/281
+[INFO] built 50/281
+[INFO] built 75/281
+[INFO] built 100/281
+[INFO] built 125/281
+[INFO] built 150/281
+[INFO] built 175/281
+[INFO] built 200/281
+[INFO] built 225/281
+[INFO] built 250/281
+[INFO] built 275/281
+[INFO] built 281/281
+[OK] labeled rows: /root/autodl-tmp/tactile_topo_seg/work_dirs/vis/tp_val_9models/rows_labeled
+[OK] clean rows  : /root/autodl-tmp/tactile_topo_seg/work_dirs/vis/tp_val_9models/rows_clean
+[OK] index csv   : /root/autodl-tmp/tactile_topo_seg/work_dirs/vis/tp_val_9models/row_index.csv

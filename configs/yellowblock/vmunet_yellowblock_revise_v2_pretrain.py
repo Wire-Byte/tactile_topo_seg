@@ -1,17 +1,8 @@
-custom_imports = dict(
-    imports=[
-        'mmseg_ext.datasets',
-        'mmseg_ext.transforms',
-    ],
-    allow_failed_imports=False,
-)
-
-experiment_name = 'vmunet_tp_revise_v2_pretrain'
+experiment_name = 'vmunet_yellowblock_revise_v2_pretrain'
 model_name = 'vmunet'
 
 repo_root = 'third_party/revise_models/VM-UNet'
 
-# VM-UNet official default depths + official VMamba pretrained init.
 model_kwargs = dict(
     input_channels=3,
     num_classes=2,
@@ -22,12 +13,15 @@ model_kwargs = dict(
 )
 
 data = dict(
-    data_root='data/TP-Dataset',
+    data_root='data/YellowBlock-TP',
     train_index='Index/train.txt',
     val_index='Index/val.txt',
+    topology_split='Index/val.txt',
     img_subdir='JPEGImages',
     gt_subdir='GroundTruth',
+    topology_gt_subdir='GroundTruth',
     image_size=(512, 512),
+    normalize=True,
     val_keep_original_size=False,
 )
 
@@ -44,6 +38,8 @@ train = dict(
     amp=True,
     ema_momentum=0.0,
     eval_with_ema=False,
+    log_subdir='yellowblock/revise',
+    work_subdir='yellowblock/revise',
 )
 
 optimizer = dict(type='AdamW', betas=(0.9, 0.999))

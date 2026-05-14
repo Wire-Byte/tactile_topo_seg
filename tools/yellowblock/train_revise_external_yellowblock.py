@@ -370,7 +370,13 @@ def export_predictions(
     return mapping_csv
 
 
-def run_topology_eval(pred_dir: Path, mapping_csv: Path, metrics_dir: Path) -> Tuple[Path, Path, Path, Path]:
+def run_topology_eval(
+    pred_dir: Path,
+    mapping_csv: Path,
+    metrics_dir: Path,
+    topology_split_file: Path,
+    topology_gt_root: Path,
+) -> Tuple[Path, Path, Path, Path]:
     per_sample = metrics_dir / "topology_per_sample.csv"
     summary = metrics_dir / "topology_summary.csv"
 
@@ -380,9 +386,9 @@ def run_topology_eval(pred_dir: Path, mapping_csv: Path, metrics_dir: Path) -> T
         "--pred-dir",
         str(pred_dir),
         "--split-file",
-        str(ROOT / "data/TP-Dataset/Index/val.txt"),
+        str(topology_split_file),
         "--gt-root",
-        str(ROOT / "data/TP-Dataset/GroundTruth"),
+        str(topology_gt_root),
         "--out-csv",
         str(per_sample),
         "--summary-csv",
@@ -488,8 +494,8 @@ def run_topology_eval(pred_dir: Path, mapping_csv: Path, metrics_dir: Path) -> T
 
 
 def parse_args() -> argparse.Namespace:
-    p = argparse.ArgumentParser(description="Train external official models on TP dataset with unified evaluation.")
-    p.add_argument("--config", required=True, help="Path to config in configs/tp_dataset")
+    p = argparse.ArgumentParser(description="Train external official models on yellowblock-style TP format with unified evaluation.")
+    p.add_argument("--config", required=True, help="Path to config in configs/yellowblock")
     p.add_argument("--work-dir", default=None, help="Override work dir")
     p.add_argument("--device", default="cuda:0")
     return p.parse_args()
@@ -512,10 +518,12 @@ def main() -> None:
     train_cfg = cfg["train"]
     optim_cfg = cfg["optimizer"]
 
-    work_dir = Path(args.work_dir) if args.work_dir else (ROOT / "work_dirs/revise" / exp_name)
+    default_work_subdir = str(train_cfg.get("work_subdir", "yellowblock/revise"))
+    work_dir = Path(args.work_dir) if args.work_dir else (ROOT / "work_dirs" / default_work_subdir / exp_name)
     work_dir.mkdir(parents=True, exist_ok=True)
 
-    logs_dir = ROOT / "logs/revise"
+    log_subdir = str(train_cfg.get("log_subdir", "yellowblock/revise"))
+    logs_dir = ROOT / "logs" / log_subdir
     logs_dir.mkdir(parents=True, exist_ok=True)
     log_file = logs_dir / f"train_{exp_name}.log"
 
@@ -753,7 +761,15 @@ def main() -> None:
     preds_dir = work_dir / "preds_best"
     mapping_csv = export_predictions(model, model_name, val_loader, device, preds_dir)
 
-    topo_per, topo_summary, topo2_per, topo2_sum = run_topology_eval(preds_dir, mapping_csv, metrics_dir)
+    topology_split = data_root / str(data_cfg.get("topology_split", data_cfg["val_index"]))
+    topology_gt_root = data_root / str(data_cfg.get("topology_gt_subdir", data_cfg["gt_subdir"]))
+    topo_per, topo_summary, topo2_per, topo2_sum = run_topology_eval(
+        preds_dir,
+        mapping_csv,
+        metrics_dir,
+        topology_split_file=topology_split,
+        topology_gt_root=topology_gt_root,
+    )
 
     topo2_row = list(csv.DictReader(topo2_sum.open("r", encoding="utf-8", newline="")))[0]
 

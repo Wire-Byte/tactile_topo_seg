@@ -1,0 +1,3 @@
+[OK] per-sample csv: work_dirs/TP2Yellow/segformer_b2_tp8500_yellowblock/topology_test.csv
+[OK] summary csv   : work_dirs/TP2Yellow/segformer_b2_tp8500_yellowblock/topology_test_summary.csv
+[SUMMARY] N=123 dice=0.9214 iou=0.8735 clDice=0.9054

@@ -1,0 +1,55 @@
+[OK] per-sample csv: /root/autodl-tmp/tactile_topo_seg/work_dirs/TP2Yellow/vmunet_tp_revise_yellowblock/metrics/topology_v2_per_sample.csv
+[OK] summary csv   : /root/autodl-tmp/tactile_topo_seg/work_dirs/TP2Yellow/vmunet_tp_revise_yellowblock/metrics/topology_v2_summary.csv
+[SUMMARY] N=123 T_prec=0.7326 T_sens=0.8279 clDice=0.7400 LCR=0.9161
+[OK] per-sample csv: /root/autodl-tmp/tactile_topo_seg/work_dirs/TP2Yellow/vmunet_tp_revise_yellowblock/metrics/topology_per_sample.csv
+[OK] summary csv   : /root/autodl-tmp/tactile_topo_seg/work_dirs/TP2Yellow/vmunet_tp_revise_yellowblock/metrics/topology_summary.csv
+[SUMMARY] N=123 dice=0.8527 iou=0.7800 clDice=0.7400
+{
+  "experiment_name": "vmunet_tp_revise",
+  "model_name": "vmunet",
+  "config": "configs/tp_dataset/vmunet_tp_revise.py",
+  "checkpoint": "work_dirs/revise/vmunet_tp_revise/ckpt/best_mIoU.pth",
+  "checkpoint_iter": 10000,
+  "work_dir": "work_dirs/TP2Yellow/vmunet_tp_revise_yellowblock",
+  "split_file": "data/YellowBlock-TP/Index/test.txt",
+  "seg_metrics": {
+    "aAcc": 0.9377184363884654,
+    "mIoU": 0.8482085661940415,
+    "mAcc": 0.9015193133465247,
+    "mDice": 0.9162079948335433,
+    "mFscore": 0.9162079948330443,
+    "mPrecision": 0.9342009030486453,
+    "mRecall": 0.9015193133465247
+  },
+  "pred_dir": "work_dirs/TP2Yellow/vmunet_tp_revise_yellowblock/preds_test",
+  "mapping_csv": "work_dirs/TP2Yellow/vmunet_tp_revise_yellowblock/preds_test/pred_mapping.csv",
+  "topology_csv": "work_dirs/TP2Yellow/vmunet_tp_revise_yellowblock/metrics/topology_per_sample.csv",
+  "topology_summary_csv": "work_dirs/TP2Yellow/vmunet_tp_revise_yellowblock/metrics/topology_summary.csv",
+  "topology_v2_csv": "work_dirs/TP2Yellow/vmunet_tp_revise_yellowblock/metrics/topology_v2_per_sample.csv",
+  "topology_v2_summary_csv": "work_dirs/TP2Yellow/vmunet_tp_revise_yellowblock/metrics/topology_v2_summary.csv",
+  "topology_summary": {
+    "samples": 123,
+    "missing_gt": 0,
+    "mean_dice": 0.852658634252,
+    "mean_iou": 0.780032440696,
+    "mean_clDice": 0.740007120975,
+    "mean_cc_pred": 32.008130081301,
+    "mean_cc_gt": 1.089430894309,
+    "mean_lcr_pred": 0.916110112558,
+    "mean_lcr_gt": 0.989997669798,
+    "mean_holes_pred": 62.813008130081,
+    "mean_holes_gt": 0.048780487805
+  },
+  "topology_v2_summary": {
+    "samples": 123,
+    "mean_T_prec": 0.732562742538,
+    "mean_T_sens": 0.827876154823,
+    "mean_clDice": 0.740007120975,
+    "mean_LCR_pred": 0.916110112558,
+    "mean_LCR_gt": 0.989997669798,
+    "mean_abs_dLCR": 0.079500969005,
+    "mean_Betti_Error": 93.715447154472,
+    "mean_abs_dBeta0": 30.951219512195,
+    "mean_abs_dBeta1": 62.764227642276
+  }
+}

@@ -1,0 +1,37 @@
+============================================================
+[queue] model=bevanet_s_yellowblock_revise_v2_pretrain_smoke500 attempt=1/3
+[queue] cfg=configs/yellowblock/bevanet_s_yellowblock_revise_v2_pretrain_smoke500.py
+Traceback (most recent call last):
+  File "/root/autodl-tmp/tactile_topo_seg/tools/yellowblock/train_revise_external_yellowblock.py", line 810, in <module>
+    main()
+  File "/root/autodl-tmp/tactile_topo_seg/tools/yellowblock/train_revise_external_yellowblock.py", line 510, in main
+    cfg = load_py_config(cfg_path)
+  File "/root/autodl-tmp/tactile_topo_seg/tools/yellowblock/train_revise_external_yellowblock.py", line 59, in load_py_config
+    raise RuntimeError(f"Missing '{k}' in config: {path}")
+RuntimeError: Missing 'model_name' in config: /root/autodl-tmp/tactile_topo_seg/configs/yellowblock/bevanet_s_yellowblock_revise_v2_pretrain_smoke500.py
+[queue] bevanet_s_yellowblock_revise_v2_pretrain_smoke500 failed with code=1; restarting...
+============================================================
+[queue] model=bevanet_s_yellowblock_revise_v2_pretrain_smoke500 attempt=2/3
+[queue] cfg=configs/yellowblock/bevanet_s_yellowblock_revise_v2_pretrain_smoke500.py
+Traceback (most recent call last):
+  File "/root/autodl-tmp/tactile_topo_seg/tools/yellowblock/train_revise_external_yellowblock.py", line 810, in <module>
+    main()
+  File "/root/autodl-tmp/tactile_topo_seg/tools/yellowblock/train_revise_external_yellowblock.py", line 510, in main
+    cfg = load_py_config(cfg_path)
+  File "/root/autodl-tmp/tactile_topo_seg/tools/yellowblock/train_revise_external_yellowblock.py", line 59, in load_py_config
+    raise RuntimeError(f"Missing '{k}' in config: {path}")
+RuntimeError: Missing 'model_name' in config: /root/autodl-tmp/tactile_topo_seg/configs/yellowblock/bevanet_s_yellowblock_revise_v2_pretrain_smoke500.py
+[queue] bevanet_s_yellowblock_revise_v2_pretrain_smoke500 failed with code=1; restarting...
+============================================================
+[queue] model=bevanet_s_yellowblock_revise_v2_pretrain_smoke500 attempt=3/3
+[queue] cfg=configs/yellowblock/bevanet_s_yellowblock_revise_v2_pretrain_smoke500.py
+Traceback (most recent call last):
+  File "/root/autodl-tmp/tactile_topo_seg/tools/yellowblock/train_revise_external_yellowblock.py", line 810, in <module>
+    main()
+  File "/root/autodl-tmp/tactile_topo_seg/tools/yellowblock/train_revise_external_yellowblock.py", line 510, in main
+    cfg = load_py_config(cfg_path)
+  File "/root/autodl-tmp/tactile_topo_seg/tools/yellowblock/train_revise_external_yellowblock.py", line 59, in load_py_config
+    raise RuntimeError(f"Missing '{k}' in config: {path}")
+RuntimeError: Missing 'model_name' in config: /root/autodl-tmp/tactile_topo_seg/configs/yellowblock/bevanet_s_yellowblock_revise_v2_pretrain_smoke500.py
+[queue] bevanet_s_yellowblock_revise_v2_pretrain_smoke500 failed with code=1; restarting...
+[queue] bevanet_s_yellowblock_revise_v2_pretrain_smoke500 failed after 3 attempts

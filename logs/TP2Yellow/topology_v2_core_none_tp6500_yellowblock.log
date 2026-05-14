@@ -1,0 +1,3 @@
+[OK] per-sample csv: work_dirs/TP2Yellow/core_none_tp6500_yellowblock/topology_v2_test.csv
+[OK] summary csv   : work_dirs/TP2Yellow/core_none_tp6500_yellowblock/topology_v2_test_summary.csv
+[SUMMARY] N=123 T_prec=0.9498 T_sens=0.9328 clDice=0.9305 LCR=0.9709

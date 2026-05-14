@@ -1,0 +1,14 @@
+/root/autodl-tmp/tactile_topo_seg/third_party/mmsegmentation/mmseg/models/decode_heads/decode_head.py:120: UserWarning: For binary segmentation, we suggest using`out_channels = 1` to define the outputchannels of segmentor, and use `threshold`to convert `seg_logits` into a predictionapplying a threshold
+  warnings.warn('For binary segmentation, we suggest using'
+/root/autodl-tmp/tactile_topo_seg/third_party/mmsegmentation/mmseg/models/losses/cross_entropy_loss.py:250: UserWarning: Default ``avg_non_ignore`` is False, if you would like to ignore the certain label and average loss over non-ignore labels, which is the same with PyTorch official cross_entropy, set ``avg_non_ignore=True``.
+  warnings.warn(
+/root/autodl-tmp/tactile_topo_seg/third_party/mmsegmentation/mmseg/models/decode_heads/decode_head.py:136: UserWarning: threshold is not defined for binary, and defaultsto 0.3
+  warnings.warn('threshold is not defined for binary, and defaults'
+Loads checkpoint by local backend from path: work_dirs/ablation/core_none/ckpt/core_none/iter_6500.pth
+[INFO] exported 50/281
+[INFO] exported 100/281
+[INFO] exported 150/281
+[INFO] exported 200/281
+[INFO] exported 250/281
+[OK] prediction dir: work_dirs/vis/tp_val_9models/preds/core_none
+[OK] mapping csv   : work_dirs/vis/tp_val_9models/preds/core_none/pred_mapping.csv

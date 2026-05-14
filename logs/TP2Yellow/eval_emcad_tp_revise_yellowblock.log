@@ -1,0 +1,75 @@
+/root/miniconda3/envs/tpseg/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/tpseg/lib/python3.10/site-packages/timm/models/registry.py:4: FutureWarning: Importing from timm.models.registry is deprecated, please import via timm.models
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.models", FutureWarning)
+/root/autodl-tmp/tactile_topo_seg/third_party/revise_models/emcad/lib/pvtv2.py:386: UserWarning: Overwriting pvt_v2_b0 in registry with lib.pvtv2.pvt_v2_b0. This is because the name being registered conflicts with an existing name. Please check if this is not expected.
+  class pvt_v2_b0(PyramidVisionTransformerImpr):
+/root/autodl-tmp/tactile_topo_seg/third_party/revise_models/emcad/lib/pvtv2.py:396: UserWarning: Overwriting pvt_v2_b1 in registry with lib.pvtv2.pvt_v2_b1. This is because the name being registered conflicts with an existing name. Please check if this is not expected.
+  class pvt_v2_b1(PyramidVisionTransformerImpr):
+/root/autodl-tmp/tactile_topo_seg/third_party/revise_models/emcad/lib/pvtv2.py:404: UserWarning: Overwriting pvt_v2_b2 in registry with lib.pvtv2.pvt_v2_b2. This is because the name being registered conflicts with an existing name. Please check if this is not expected.
+  class pvt_v2_b2(PyramidVisionTransformerImpr):
+/root/autodl-tmp/tactile_topo_seg/third_party/revise_models/emcad/lib/pvtv2.py:412: UserWarning: Overwriting pvt_v2_b3 in registry with lib.pvtv2.pvt_v2_b3. This is because the name being registered conflicts with an existing name. Please check if this is not expected.
+  class pvt_v2_b3(PyramidVisionTransformerImpr):
+/root/autodl-tmp/tactile_topo_seg/third_party/revise_models/emcad/lib/pvtv2.py:420: UserWarning: Overwriting pvt_v2_b4 in registry with lib.pvtv2.pvt_v2_b4. This is because the name being registered conflicts with an existing name. Please check if this is not expected.
+  class pvt_v2_b4(PyramidVisionTransformerImpr):
+/root/autodl-tmp/tactile_topo_seg/third_party/revise_models/emcad/lib/pvtv2.py:429: UserWarning: Overwriting pvt_v2_b5 in registry with lib.pvtv2.pvt_v2_b5. This is because the name being registered conflicts with an existing name. Please check if this is not expected.
+  class pvt_v2_b5(PyramidVisionTransformerImpr):
+/root/miniconda3/envs/tpseg/lib/python3.10/site-packages/timm/models/helpers.py:7: FutureWarning: Importing from timm.models.helpers is deprecated, please import via timm.models
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.models", FutureWarning)
+Model pvt_v2_b0 backbone:  created, param count: 3409760
+Model EMCAD decoder:  created, param count: 506507
+[OK] per-sample csv: /root/autodl-tmp/tactile_topo_seg/work_dirs/TP2Yellow/emcad_tp_revise_yellowblock/metrics/topology_v2_per_sample.csv
+[OK] summary csv   : /root/autodl-tmp/tactile_topo_seg/work_dirs/TP2Yellow/emcad_tp_revise_yellowblock/metrics/topology_v2_summary.csv
+[SUMMARY] N=123 T_prec=0.8972 T_sens=0.4230 clDice=0.4995 LCR=0.7453
+[OK] per-sample csv: /root/autodl-tmp/tactile_topo_seg/work_dirs/TP2Yellow/emcad_tp_revise_yellowblock/metrics/topology_per_sample.csv
+[OK] summary csv   : /root/autodl-tmp/tactile_topo_seg/work_dirs/TP2Yellow/emcad_tp_revise_yellowblock/metrics/topology_summary.csv
+[SUMMARY] N=123 dice=0.5138 iou=0.4288 clDice=0.4995
+{
+  "experiment_name": "emcad_tp_revise",
+  "model_name": "emcad",
+  "config": "configs/tp_dataset/emcad_tp_revise.py",
+  "checkpoint": "work_dirs/revise/emcad_tp_revise/ckpt/best_mIoU.pth",
+  "checkpoint_iter": 10000,
+  "work_dir": "work_dirs/TP2Yellow/emcad_tp_revise_yellowblock",
+  "split_file": "data/YellowBlock-TP/Index/test.txt",
+  "seg_metrics": {
+    "aAcc": 0.8528634978503715,
+    "mIoU": 0.6364347580232141,
+    "mAcc": 0.7198102831645089,
+    "mDice": 0.7598087208768575,
+    "mFscore": 0.759808720876396,
+    "mPrecision": 0.9115908992874395,
+    "mRecall": 0.7198102831645089
+  },
+  "pred_dir": "work_dirs/TP2Yellow/emcad_tp_revise_yellowblock/preds_test",
+  "mapping_csv": "work_dirs/TP2Yellow/emcad_tp_revise_yellowblock/preds_test/pred_mapping.csv",
+  "topology_csv": "work_dirs/TP2Yellow/emcad_tp_revise_yellowblock/metrics/topology_per_sample.csv",
+  "topology_summary_csv": "work_dirs/TP2Yellow/emcad_tp_revise_yellowblock/metrics/topology_summary.csv",
+  "topology_v2_csv": "work_dirs/TP2Yellow/emcad_tp_revise_yellowblock/metrics/topology_v2_per_sample.csv",
+  "topology_v2_summary_csv": "work_dirs/TP2Yellow/emcad_tp_revise_yellowblock/metrics/topology_v2_summary.csv",
+  "topology_summary": {
+    "samples": 123,
+    "missing_gt": 0,
+    "mean_dice": 0.513805530298,
+    "mean_iou": 0.428797924842,
+    "mean_clDice": 0.499537507913,
+    "mean_cc_pred": 19.739837398374,
+    "mean_cc_gt": 1.089430894309,
+    "mean_lcr_pred": 0.745339703435,
+    "mean_lcr_gt": 0.989997669798,
+    "mean_holes_pred": 13.943089430894,
+    "mean_holes_gt": 0.048780487805
+  },
+  "topology_v2_summary": {
+    "samples": 123,
+    "mean_T_prec": 0.897249202291,
+    "mean_T_sens": 0.422973486309,
+    "mean_clDice": 0.499537507913,
+    "mean_LCR_pred": 0.745339703435,
+    "mean_LCR_gt": 0.989997669798,
+    "mean_abs_dLCR": 0.246440033476,
+    "mean_Betti_Error": 32.723577235772,
+    "mean_abs_dBeta0": 18.829268292683,
+    "mean_abs_dBeta1": 13.894308943089
+  }
+}
